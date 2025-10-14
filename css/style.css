@@ -728,6 +728,7 @@ section:last-of-type {
   font-size: 0.9rem;
   color: #ccc;
   margin-bottom: 25px;
+  flex-grow: 1;
 }
 
 .certificate-card .cta-button {
@@ -893,7 +894,7 @@ footer {
 
 @media (max-width: 820px) {
   section {
-    padding: 100px 5%;
+    padding: 100px 20px;
   }
   .section-title {
     font-size: 2rem;
@@ -903,7 +904,8 @@ footer {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 60%;
+    width: 70%;
+    max-width: 300px;
     height: 100vh;
     background: rgba(10, 10, 26, 0.95);
     backdrop-filter: blur(10px);
