@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name - Creative Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="scroll-progress-bar"></div>
+    <header id="main-header">
+      <a href="#" class="logo"><span class="accent">Dhll</span>Dev.</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="hamburger-btn" aria-label="Open Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main>
+      <section id="hero">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+          <div class="hero-photo" data-aos="zoom-in">
+            <!-- Ganti src di bawah ini dengan foto profil lo nanti -->
+            <img src="assets/img/foto_profil.jpeg" alt="Foto Fadhil" />
+          </div>
+          <div class="hero-text" data-aos="fade-up" data-aos-delay="200">
+            <p class="greeting">Fadhil</p>
+            <h1>
+              <span class="typing-effect"></span
+              ><span class="hero-cursor"> |</span>
+            </h1>
+            <h2 class="tagline">Bringing ideas to life on every screen</h2>
+            <div class="hero-buttons">
+              <a href="#portfolio" class="cta-button">Lihat Karya Saya</a>
+              <a
+                href="assets/cv_fadhil.pdf"
+                class="cta-button secondary"
+                download
+                >Download CV</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2 class="section-title" data-aos="fade-down">01. About Me</h2>
+        <div class="about-container">
+          <div class="about-text" data-aos="fade-right" data-aos-delay="200">
+            <h3>Halo! Saya Fadhil 👋</h3>
+            <p>
+              Perjalanan saya di dunia coding dimulai dari rasa penasaran
+              sederhana: bagaimana sebuah aplikasi di ponsel atau website bisa
+              berfungsi? Rasa penasaran itu membawa saya untuk mendalami dunia
+              <span class="highlight">Web Development</span>, dan tak lama
+              kemudian, merambah ke
+              <span class="highlight">Mobile Development</span>.
+            </p>
+            <p>
+              Kini, saya berfokus untuk membangun aplikasi yang tidak hanya
+              berjalan dengan baik, tapi juga memberikan pengalaman pengguna
+              yang mulus dan intuitif di berbagai platform. Saya percaya bahwa
+              produk digital terbaik lahir dari perpaduan antara
+              <span class="highlight"
+                >kode yang efisien, desain yang bersih, dan pemahaman
+                mendalam</span
+              >
+              terhadap kebutuhan pengguna.
+            </p>
+          </div>
+
+          <div class="about-terminal" data-aos="fade-left" data-aos-delay="400">
+            <div
+              class="terminal-commands"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              <button class="command-button" data-command="whoami">
+                [ whoami ]
+              </button>
+              <button class="command-button" data-command="skills">
+                [ skills ]
+              </button>
+              <button class="command-button" data-command="journey">
+                [ journey ]
+              </button>
+            </div>
+
+            <div class="terminal-header">
+              <div class="terminal-button red"></div>
+              <div class="terminal-button yellow"></div>
+              <div class="terminal-button green"></div>
+            </div>
+            <div class="terminal-body">
+              <p>> <span id="terminal-line-1"></span></p>
+              <p>> <span id="terminal-line-2"></span></p>
+              <p>> <span class="cursor">_</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2 class="section-title" data-aos="fade-down">02. Tech Stack</h2>
+        <div class="skills-grid">
+          <div class="skill-category" data-aos="fade-up">
+            <h3>Web Frontend</h3>
+            <div class="skill-list">
+              <div class="skill-card">
+                <i class="devicon-html5-plain colored"></i><span>HTML5</span>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-css3-plain colored"></i><span>CSS3</span>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-javascript-plain colored"></i
+                ><span>JavaScript</span>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-tailwindcss-plain colored"></i
+                ><span>TailwindCSS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+            <h3>Web Backend</h3>
+            <div class="skill-list">
+              <div class="skill-card">
+                <i class="devicon-php-plain colored"></i><span>PHP</span>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-laravel-plain colored"></i
+                ><span>Laravel</span>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-lumen-original"></i><span>Lumen</span>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-mysql-plain colored"></i><span>MySQL</span>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-filamentphp-plain colored"></i
+                ><span>Filament</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+            <h3>Mobile Development</h3>
+            <div class="skill-list">
+              <div class="skill-card">
+                <i class="devicon-flutter-plain colored"></i
+                ><span>Flutter</span>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-dart-plain colored"></i><span>Dart</span>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-sqlite-plain colored"></i><span>SqlLite</span>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-kotlin-plain colored"></i><span>Kotlin</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="600">
+            <h3>Tools & Workflow</h3>
+            <div class="skill-list">
+              <div class="skill-card">
+                <i class="devicon-git-plain colored"></i><span>Git</span>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-github-original colored"></i
+                ><span>GitHub</span>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-docker-plain colored"></i><span>Docker</span>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-figma-plain colored"></i><span>Figma</span>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-vscode-plain colored"></i><span>VS Code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio">
+        <h2 class="section-title" data-aos="fade-down">
+          03. Featured Projects
+        </h2>
+        <div class="portfolio-grid">
+          <div
+            class="project-card"
+            data-aos="fade-up"
+            data-title="karyaLokal"
+            data-description="Sebuah platform marketplace freelancer full-stack yang dirancang untuk menghubungkan klien dengan talenta lokal di Indonesia. Fitur utamanya adalah arsitektur multi-role yang fleksibel, di mana setiap pengguna secara default adalah Klien dan dapat memilih untuk menjadi Freelancer melalui proses approval oleh admin. Sistem ini mengelola siklus transaksi end-to-end: mulai dari pemesanan, integrasi pembayaran online via Midtrans, komunikasi per-proyek, pengiriman hasil kerja, hingga sistem ulasan dan rating otomatis."
+            data-tech="Laravel, PHP, MySQL, Bootstrap, JavaScript (AJAX), Filament v3, Midtrans API, Google OAuth"
+            data-images="assets/img/karyalokal/1.png,assets/img/karyalokal/2.png,assets/img/karyalokal/3.png,assets/img/karyalokal/4.png,assets/img/karyalokal/5.png,assets/img/karyalokal/6.png"
+            data-demo-link="#"
+            data-github-link="https://github.com/Chrdhll/marketplace_karyalokal"
+          >
+            <img src="assets/img/karyalokal.png" alt="Project Thumbnail 1" />
+            <div class="project-overlay">
+              <div class="project-info">
+                <h3>karyaLokal</h3>
+                <p>Web Application</p>
+                <span>View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card"
+            data-aos="fade-up"
+            data-title="PustakaVault"
+            data-description="Sebuah sistem manajemen perpustakaan full-stack yang dibangun dengan Laravel. Proyek ini mencakup fitur autentikasi, otorisasi berbasis peran (Admin & Member), dan alur peminjaman buku yang lengkap dengan logika denda. Fitur unggulannya adalah panel admin profesional yang dibangun dengan Filament dan UI/UX modern seperti detail buku dinamis via AJAX."
+            data-tech="Laravel, PHP, Filament, MySQL, Blade, Bootstrap 5, JavaScript, jQuery (AJAX)"
+            data-images="assets/img/pustakavault/1.png,assets/img/pustakavault/2.1.png,assets/img/pustakavault/2.png,assets/img/pustakavault/3.png"
+            data-demo-link="#"
+            data-github-link="https://github.com/Chrdhll/Tubes---PustakaVault"
+          >
+            <img src="assets/img/pustakavault.png" alt="Project Thumbnail 2" />
+            <div class="project-overlay">
+              <div class="project-info">
+                <h3>PustakaVault</h3>
+                <p>Web Application</p>
+                <span>View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card"
+            data-aos="fade-up"
+            data-title="Sipeka-pnp"
+            data-description="Aplikasi kuesioner akademik berbasis web untuk Politeknik Negeri Padang. Memungkinkan mahasiswa mengisi evaluasi dosen dan mata kuliah secara digital dengan sistem login, validasi pengisian tunggal, serta dashboard rekap hasil untuk admin."
+            data-tech="Laravel, PHP, MySQL, Bootstrap, JavaScript, phpMyAdmin"
+            data-images="assets/img/sipeka/1.png,assets/img/sipeka/2.png,assets/img/sipeka/3.png,assets/img/sipeka/4.png"
+            data-demo-link="https://mibers23.my.id/Project_kelompok5/PblBerdikari/"
+            data-github-link="https://github.com/Chrdhll/Web-kuesioner-PNP"
+          >
+            <img src="assets/img/sipeka.png" alt="Project Thumbnail 3" />
+            <div class="project-overlay">
+              <div class="project-info">
+                <h3>Sipeka-pnp</h3>
+                <p>Web Application</p>
+                <span>View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card"
+            data-aos="fade-up"
+            data-title="Data kampus flutter + lumen api "
+            data-description="Aplikasi manajemen data dosen berbasis Flutter yang terhubung dengan API Lumen dan  Google Maps. Dirancang untuk mempermudah pengelolaan data kampus yang ada di Indonesia, mulai dari proses input, update, dan penghapusan data secara real-time, tampilan peta lokasi kampus. Aplikasi ini menampilkan daftar kampus dalam antarmuka modern menggunakan card view yang responsif, dilengkapi fitur edit cepat dengan ikon pensil, hapus dengan long press, serta menampilkan tanggal pembuatan (created_at) di setiap data. Data disimpan dan diambil dari backend Lumen API dengan koneksi JSON RESTful."
+            data-tech="Flutter, Dart, Lumen 10, RESTful API, HTTP Package, Provider (State Management), JSON, Laravel Eloquent ORM, Google Maps API"
+            data-images="assets/img/datakampus/1.png,assets/img/datakampus/2.png,assets/img/datakampus/3.png"
+            data-demo-link="#"
+            data-github-link="https://github.com/Chrdhll/api_kampus_flutter"
+          >
+            <img src="assets/img/datakampus.png" alt="Project Thumbnail 4" />
+            <div class="project-overlay">
+              <div class="project-info">
+                <h3>Data kampus</h3>
+                <p>Mobile Application</p>
+                <span>View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card"
+            data-aos="fade-up"
+            data-title="Clinic App"
+            data-description="Aplikasi mobile UI untuk manajemen klinik dengan tampilan modern. Menyediakan fitur dashboard dokter, daftar pasien, jadwal konsultasi, dan form registrasi pasien dalam desain yang bersih dan responsif."
+            data-tech="Kotlin, Android Studio, Figma"
+            data-images="assets/img/clinic/1.png,assets/img/clinic/2.png,assets/img/clinic/3.png,assets/img/clinic/4.png"
+            data-demo-link="#"
+            data-github-link="https://github.com/Chrdhll/ClinicApps"
+          >
+            <img src="assets/img/clinic.png" alt="Project Thumbnail 5" />
+            <div class="project-overlay">
+              <div class="project-info">
+                <h3>Clinic App</h3>
+                <p>Mobile Application</p>
+                <span>View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card"
+            data-aos="fade-up"
+            data-title="To-do list"
+            data-description="Aplikasi To-Do List offline berbasis Flutter dengan desain modern dan pengalaman pengguna yang intuitif. Aplikasi ini memungkinkan pengguna untuk menambah, mengedit, menandai selesai, dan menghapus tugas dengan mudah. Setiap tugas dapat memiliki tanggal tenggat waktu, status (To Do, Today, Completed), serta indikator 'Terlambat' jika melewati deadline. Dilengkapi fitur sub-task opsional, tampilan dua kolom, serta penyimpanan lokal menggunakan SQLite agar data tetap tersimpan meskipun offline. UI menonjolkan kesederhanaan dengan interaksi yang halus dan responsif."
+            data-tech="Flutter, Dart, SQLite (sqflite), Provider (State Management), Material Design, Path Provider, Intl (Date Formatting)"
+            data-images="assets/img/todo/1.png,assets/img/todo/2.png,assets/img/todo/3.png"
+            data-demo-link="#"
+            data-github-link="https://github.com/Chrdhll/To-Do-list"
+          >
+            <img src="assets/img/todolist.png" alt="Project Thumbnail 1" />
+            <div class="project-overlay">
+              <div class="project-info">
+                <h3>To-do list</h3>
+                <p>Mobile Application</p>
+                <span>View Project</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="project-modal" class="modal-backdrop">
+          <div class="modal-content">
+            <span class="modal-close-button">&times;</span>
+            <div class="swiper modal-swiper">
+              <div class="swiper-wrapper" id="modal-images-wrapper"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <h2 id="modal-title"></h2>
+            <div class="modal-body">
+              <p id="modal-description"></p>
+              <h3>Tech Stack:</h3>
+              <div id="modal-tech" class="tech-stack-list"></div>
+            </div>
+            <div class="modal-footer">
+              <a
+                id="modal-demo-link"
+                href="#"
+                target="_blank"
+                class="cta-button"
+                >View Demo</a
+              >
+              <a
+                id="modal-github-link"
+                href="#"
+                target="_blank"
+                class="cta-button secondary"
+                >View Code</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="certificates">
+        <h2 class="section-title" data-aos="fade-down">04. Certificates</h2>
+        <div class="certificate-grid">
+          <div class="certificate-card" data-aos="fade-up">
+            <div class="certificate-header">
+              <i class="devicon-amazonwebservices-plain colored"></i>
+              <span class="issuer">AWS Academy</span>
+            </div>
+            <h4>AWS Academy Cloud Foundations</h4>
+            <p>
+              Mendapatkan pemahaman mendalam tentang konsep inti komputasi awan,
+              layanan fundamental AWS, model keamanan bersama, dan
+              prinsip-prinsip arsitektur cloud.
+            </p>
+            <a
+              href="assets/aws.pdf"
+              target="_blank"
+              class="cta-button secondary"
+              >View Credential</a
+            >
+          </div>
+
+          <div class="certificate-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="certificate-header">
+              <i class="devicon-redhat-plain colored"></i>
+              <span class="issuer">Red Hat</span>
+            </div>
+            <h4>Red Hat System Administration I (RH124)</h4>
+            <p>
+              Menguasai keterampilan administrasi sistem Linux tingkat dasar,
+              termasuk manajemen file, pengguna, dan layanan melalui
+              command-line di lingkungan Red Hat Enterprise Linux.
+            </p>
+            <a
+              href="assets/redhat.pdf"
+              target="_blank"
+              class="cta-button secondary"
+              >View Credential</a
+            >
+          </div>
+
+          <div class="certificate-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="certificate-header">
+              <i class="devicon-oracle-original colored"></i>
+              <span class="issuer">Oracle Academy</span>
+            </div>
+            <h4>Database Programming with SQL</h4>
+            <p>
+              Menguasai kemampuan untuk merancang dan memanipulasi basis data
+              relasional, mencakup penulisan query SQL yang kompleks dan
+              pembuatan skema data.
+            </p>
+            <a
+              href="assets/oracle.pdf"
+              target="_blank"
+              class="cta-button secondary"
+              >View Credential</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 class="section-title" data-aos="fade-down">05. Get In Touch</h2>
+        <div class="contact-container">
+          <div class="contact-info" data-aos="fade-right">
+            <h3>Let's Collaborate</h3>
+            <p>
+              Saya selalu terbuka untuk mendiskusikan proyek baru, ide-ide
+              kreatif, atau peluang untuk menjadi bagian dari visi Anda. Jangan
+              ragu untuk mengirim pesan. Mari kita ciptakan sesuatu yang luar
+              biasa bersama!
+            </p>
+            <div class="social-links">
+              <a href="mailto:m.fadil3434@gmail.com" target="_blank"
+                ><i class="devicon-google-plain"></i
+              ></a>
+              <a href="https://github.com/Chrdhll" target="_blank"
+                ><i class="devicon-github-original"></i
+              ></a>
+            </div>
+          </div>
+          <form
+            id="contact-form"
+            class="contact-form"
+            data-aos="fade-left"
+            action="https://formspree.io/f/mdkwpdkq"
+            method="post"
+            novalidate
+          >
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+              <span class="error-message">Name cannot be empty.</span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+              <span class="error-message">Please enter a valid email.</span>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required />
+              <span class="error-message">Subject cannot be empty.</span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+              <span class="error-message">Message cannot be empty.</span>
+            </div>
+            <button type="submit" class="cta-button">Send Message</button>
+            <div id="form-success-message" class="success-message">
+              Your message has been sent successfully!
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2025 <span class="accent">Dhll</span>Dev. All Rights Reserved.
+      </p>
+      <div class="footer-links">
+        <a href="#hero">Back to Top ↑</a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
