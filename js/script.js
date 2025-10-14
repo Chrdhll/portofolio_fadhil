@@ -157,7 +157,7 @@ const commandOutputs = {
 <p>> ------------ MOBILE DEV --------------</p>
 <p>> Flutter, Dart, Kotlin</p>
 <p>> ------------ TOOLS & DEVOPS --------</p>
-<p>> Git, Docker, Figma, VS Code</p>
+<p>> Github, Docker, Figma, VS Code, Android Studio</p>
     `,
   journey: `
 <p>> Memuat catatan perjalanan...</p>
