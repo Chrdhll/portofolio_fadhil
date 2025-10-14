@@ -440,6 +440,7 @@ section:last-of-type {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
+  width: 100%;
 }
 
 .project-card {
@@ -670,6 +671,7 @@ section:last-of-type {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
+  width: 100%;
 }
 
 .certificate-card {
@@ -906,7 +908,40 @@ footer {
   .main-nav ul {
     flex-direction: column;
     text-align: center;
-    gap: 40px;
+    gap: 20px; /* Perkecil sedikit jaraknya */
+    width: 100%;
+    padding-top: 120px; /* Beri jarak dari atas layar */
+  }
+  .main-nav.mobile-menu-open li {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  .main-nav li {
+    opacity: 0;
+    transform: translateX(30px); /* Awalnya sembunyi di kanan */
+  }
+  /* Atur jeda untuk setiap item menu */
+  .main-nav.mobile-menu-open li:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  .main-nav.mobile-menu-open li:nth-child(2) {
+    transition-delay: 0.15s;
+  }
+  .main-nav.mobile-menu-open li:nth-child(3) {
+    transition-delay: 0.2s;
+  }
+  .main-nav.mobile-menu-open li:nth-child(4) {
+    transition-delay: 0.25s;
+  }
+  .main-nav.mobile-menu-open li:nth-child(5) {
+    transition-delay: 0.3s;
+  }
+  .main-nav.mobile-menu-open li:nth-child(6) {
+    transition-delay: 0.35s;
+  }
+  .main-nav.mobile-menu-open li:nth-child(7) {
+    transition-delay: 0.4s;
   }
   .main-nav a {
     font-size: 1.2rem;
@@ -926,6 +961,15 @@ footer {
     margin: 5px 0;
     border-radius: 2px;
     transition: all 0.3s ease;
+  }
+  #hamburger-btn.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  #hamburger-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+  #hamburger-btn.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
   /* --- Hero Responsive --- */
   .hero-text h1 {

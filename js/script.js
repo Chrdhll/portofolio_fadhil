@@ -359,78 +359,83 @@ const swiper = new Swiper(".testimonial-swiper", {
 });
 
 /* ==================== CONTACT FORM SUBMISSION (with Fetch & Formspree) ==================== */
-const contactForm = document.getElementById('contact-form');
-const successMessage = document.getElementById('form-success-message');
+const contactForm = document.getElementById("contact-form");
+const successMessage = document.getElementById("form-success-message");
 
-contactForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Mencegah form submit default
+contactForm.addEventListener("submit", function (event) {
+  event.preventDefault(); // Mencegah form submit default
 
-    let isValid = true;
-    const inputs = contactForm.querySelectorAll('input[required], textarea[required]');
-    
-    // --- Bagian Validasi (tetap sama) ---
-    inputs.forEach(input => {
-        const errorSpan = input.parentElement.querySelector('.error-message');
-        if (input.value.trim() === '') {
-            isValid = false;
-            input.classList.add('error');
-            errorSpan.style.display = 'block';
-        } else {
-            input.classList.remove('error');
-            errorSpan.style.display = 'none';
-        }
-        if (input.type === 'email') {
-            const emailPattern = /^\S+@\S+\.\S+$/;
-            if (!emailPattern.test(input.value.trim())) {
-                isValid = false;
-                input.classList.add('error');
-                errorSpan.style.display = 'block';
-            }
-        }
-    });
+  let isValid = true;
+  const inputs = contactForm.querySelectorAll(
+    "input[required], textarea[required]"
+  );
 
-    // --- BAGIAN PENGIRIMAN (BARU) ---
-    if (isValid) {
-        const formData = new FormData(contactForm);
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        
-        submitButton.disabled = true; // Nonaktifkan tombol saat mengirim
-        submitButton.textContent = 'Sending...';
-
-        fetch(contactForm.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(response => {
-            if (response.ok) {
-                // Jika SUKSES
-                successMessage.style.display = 'block';
-                contactForm.reset();
-            } else {
-                // Jika GAGAL dari server
-                response.json().then(data => {
-                    if (Object.hasOwn(data, 'errors')) {
-                        alert(data["errors"].map(error => error["message"]).join(", "));
-                    } else {
-                        alert('Oops! There was a problem submitting your form.');
-                    }
-                })
-            }
-        }).catch(error => {
-            // Jika GAGAL karena masalah jaringan
-            alert('Oops! There was a network problem.');
-        }).finally(() => {
-            // Apapun hasilnya, aktifkan kembali tombolnya
-            submitButton.disabled = false;
-            submitButton.textContent = 'Send Message';
-            // Sembunyikan pesan sukses setelah beberapa detik
-            setTimeout(() => {
-                successMessage.style.display = 'none';
-            }, 5000);
-        });
+  // --- Bagian Validasi (tetap sama) ---
+  inputs.forEach((input) => {
+    const errorSpan = input.parentElement.querySelector(".error-message");
+    if (input.value.trim() === "") {
+      isValid = false;
+      input.classList.add("error");
+      errorSpan.style.display = "block";
+    } else {
+      input.classList.remove("error");
+      errorSpan.style.display = "none";
     }
+    if (input.type === "email") {
+      const emailPattern = /^\S+@\S+\.\S+$/;
+      if (!emailPattern.test(input.value.trim())) {
+        isValid = false;
+        input.classList.add("error");
+        errorSpan.style.display = "block";
+      }
+    }
+  });
+
+  // --- BAGIAN PENGIRIMAN (BARU) ---
+  if (isValid) {
+    const formData = new FormData(contactForm);
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+
+    submitButton.disabled = true; // Nonaktifkan tombol saat mengirim
+    submitButton.textContent = "Sending...";
+
+    fetch(contactForm.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          // Jika SUKSES
+          successMessage.style.display = "block";
+          contactForm.reset();
+        } else {
+          // Jika GAGAL dari server
+          response.json().then((data) => {
+            if (Object.hasOwn(data, "errors")) {
+              alert(data["errors"].map((error) => error["message"]).join(", "));
+            } else {
+              alert("Oops! There was a problem submitting your form.");
+            }
+          });
+        }
+      })
+      .catch((error) => {
+        // Jika GAGAL karena masalah jaringan
+        alert("Oops! There was a network problem.");
+      })
+      .finally(() => {
+        // Apapun hasilnya, aktifkan kembali tombolnya
+        submitButton.disabled = false;
+        submitButton.textContent = "Send Message";
+        // Sembunyikan pesan sukses setelah beberapa detik
+        setTimeout(() => {
+          successMessage.style.display = "none";
+        }, 5000);
+      });
+  }
 });
 
 /* ==================== FINAL POLISHING & INTERACTIONS ==================== */
@@ -485,16 +490,19 @@ sections.forEach((section) => {
   observer.observe(section);
 });
 
-// --- Mobile Hamburger Menu ---
+/* --- Mobile Hamburger Menu (UPGRADED) --- */
 const hamburgerBtn = document.getElementById("hamburger-btn");
 const mobileNav = document.querySelector(".main-nav");
 
 hamburgerBtn.addEventListener("click", () => {
+  // Toggle kelas di tombol dan di menu navigasi
+  hamburgerBtn.classList.toggle("active");
   mobileNav.classList.toggle("mobile-menu-open");
 });
-// Tutup menu jika link diklik
-navLinks.forEach((link) => {
+
+navLinks.forEach((link) => { // <-- Langsung gunakan variabel navLinks yang sudah ada
   link.addEventListener("click", () => {
+    hamburgerBtn.classList.remove("active");
     mobileNav.classList.remove("mobile-menu-open");
   });
 });
