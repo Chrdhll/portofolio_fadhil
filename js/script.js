@@ -142,7 +142,7 @@ const commandOutputs = {
   whoami: `
 <p>> Nama: Fadhil</p>
 <p>> Posisi: Mobile & Web Developer</p>
-<p>> Fokus: Laravel, Flutter, React</p>
+<p>> Fokus: Laravel, Flutter</p>
 <p>> Filosofi: "Perpaduan antara presisi teknis dan empati pengguna."</p>
 <p>> Status: Terbuka untuk peluang kolaborasi dan proyek baru.</p>
     `,
@@ -150,7 +150,7 @@ const commandOutputs = {
 <p>> Mengambil data keahlian...</p>
 <p>> ------------ WEB FRONTEND ------------</p>
 <p>> HTML5, CSS3, JavaScript)</p>
-<p>> React, TailwindCSS</p>
+<p>> Bootstrap, TailwindCSS</p>
 <p>> ------------ WEB BACKEND -------------</p>
 <p>> PHP, Laravel</p>
 <p>> MySQL, RESTful APIs</p>
@@ -166,7 +166,7 @@ const commandOutputs = {
 <p>> 2024 - Proyek pertama: membangun Web Kuesioner Kampus.</p>
 <p>> 2024-2025 - Mendalami Laravel dan Flutter</p>
 <p>> 2025 - Mengambil tantangan di dunia mobile dengan Flutter dan Docker.</p>
-<p>> Sekarang - Terus belajar dan berkontribusi pada proyek-proyek menarik.</p>
+<p>> Sekarang - Terus belajar dan berkontribusi pada proyek-proyek menarik seperti: KaryaLokal, Website E-commerce dan lainnya.</p>
     `,
 };
 
