@@ -130,19 +130,21 @@ section:last-of-type {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 2000;
   transition: background-color 0.3s ease, padding 0.3s ease;
   padding: 20px 0; /* Ubah padding menjadi vertikal saja */
+  overflow: visible;
 }
 
 /* TAMBAHKAN RULE BARU INI */
 .header-container {
-  width: 90%; /* Mengatur lebar konten header */
+  width: 100%; /* Mengatur lebar konten header */
   max-width: 1200px; /* Batas lebar maksimal di layar besar */
   margin: 0 auto; /* Ini yang akan membuatnya selalu di tengah */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 }
 
 /* Modifikasi untuk kondisi scrolled */
@@ -159,6 +161,7 @@ section:last-of-type {
   font-weight: bold;
   color: var(--text-light);
   text-decoration: none;
+  white-space: nowrap;
 }
 .main-nav ul {
   list-style: none;
@@ -181,6 +184,30 @@ section:last-of-type {
 }
 #hamburger-btn {
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  position: relative; /* biar tetap dalam container */
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  z-index: 3000; /* pastikan selalu di atas */
+  transition: all 0.3s ease;
+}
+
+#hamburger-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
 /* ===== HERO SECTION (Updated) ===== */
@@ -899,6 +926,27 @@ footer {
   .section-title {
     font-size: 2rem;
   }
+  #hamburger-btn {
+    display: flex;
+  }
+  /* #hamburger-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--text-light);
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  } */
+  #hamburger-btn.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  #hamburger-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+  #hamburger-btn.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
   /* --- Navigasi Mobile --- */
   .main-nav {
     position: fixed;
@@ -913,6 +961,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: start;
+    z-index: 2500;
   }
   .main-nav.mobile-menu-open {
     right: 0;
@@ -957,31 +1006,6 @@ footer {
   }
   .main-nav a {
     font-size: 1.2rem;
-  }
-  #hamburger-btn {
-    display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1001;
-  }
-  #hamburger-btn span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: var(--text-light);
-    margin: 5px 0;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-  #hamburger-btn.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  #hamburger-btn.active span:nth-child(2) {
-    opacity: 0;
-  }
-  #hamburger-btn.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
   }
   /* --- Hero Responsive --- */
   .hero-text h1 {
